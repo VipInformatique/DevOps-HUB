@@ -1,29 +1,21 @@
-# 🚀 Welcome to My DevOps Blog
+# 🚀 Welcome to My DevOps and Security Blog
 
-Hi! This is my personal DevOps knowledge base.  
-Here you'll find **useful tools, tips, links, and notes** about **DevOps**, **CI/CD**, **automation**, **security**, and more.
+This is my personal knowledge base about DevOps, Linux, automation, security and Linux.  
+Here you will find tools, notes, and useful information.
 
+## 📚 Posts and Resources
 
+### 🛠 [Kali Linux Tools](kali-tools.md)
+List of essential Kali Linux tools for pentesting and security testing.
 
-## 📚 Blog Posts
+### 🔄 [CI/CD Notes](cicd.md) *(coming soon)*
+Notes about CI/CD, automation, and pipelines.
 
-### 🛠 [DevOps Tools](tools.md)
-A curated list of essential DevOps tools including Docker, Kubernetes, Ansible, Terraform, and others.
-
-### 🔄 [CI/CD Notes](cicd.md)
-Notes and practical guides for building Continuous Integration and Continuous Deployment pipelines using GitHub Actions, Jenkins, GitLab CI, and more.
-
-### 🔒 [Security Tips](security.md)
-Helpful tips on securing CI/CD pipelines, secret management, and improving overall security in DevOps workflows.
-
-
+### 🔒 [Security](security.md) *(coming soon)*
+General security tips, including Linux hardening and secure configurations.
 
 ## 🌐 About
 
-This blog is a personal collection of DevOps knowledge, experiments, and lessons learned.  
-I hope it helps others on their DevOps journey!  
-Feel free to explore and reach out if you have suggestions or questions.
+This blog is a collection of tools, notes, and links that I use and recommend.
 
-
-
-Created and maintained by VipInformatique.fr
+(c) 2025  Created and maintained by VipInformatique.fr
