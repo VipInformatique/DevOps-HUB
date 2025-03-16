@@ -2,33 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jenkins Pipeline Viewer</title>
+    <title>Jenkins Pipeline for Nginx</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
+        }
+        h1 {
+            color: #333;
         }
         pre {
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 5px;
             overflow-x: auto;
+            white-space: pre-wrap;
         }
-        h1 {
-            color: #333;
+        p {
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
-    <h1>Jenkins Pipeline Example</h1>
-    <p>Below is the content of <code>nginx-pipeline.groovy</code>:</p>
-    <pre id="code">Loading...</pre>
+    <h1>Jenkins Pipeline: Automatic Nginx Deployment and Testing</h1>
+
+    <p>
+        This Jenkins pipeline performs an automated deployment and test of an Nginx container on a RHEL system.
+        The pipeline has the following steps:
+    </p>
+    <ul>
+        <li>⚙️ <strong>System Update</strong>: Update the system using <code>dnf update -y</code>.</li>
+        <li>📥 <strong>Pull Nginx Image</strong>: Download the latest Nginx image from Docker Hub.</li>
+        <li>🚀 <strong>Run and Test Nginx</strong>:
+            <ul>
+                <li>Start Nginx container mapped to port 8088.</li>
+                <li>Check if Nginx responds with the welcome page.</li>
+                <li>Clean up: Stop and remove the container.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>📜 Pipeline Code</h2>
+    <pre id="code">Loading pipeline...</pre>
 
     <script>
-        // Ścieżka do pliku (dostępnego publicznie)
+        // URL do pliku groovy
         const fileUrl = 'https://vipinformatique.github.io/DevOps-HUB/automation/jenkins/nginx-pipeline.groovy';
 
-        // Pobieranie zawartości pliku i wstawianie do HTML
+        // Pobierz zawartość pliku i wyświetl
         fetch(fileUrl)
             .then(response => {
                 if (!response.ok) throw new Error('File not found');
