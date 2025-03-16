@@ -19,15 +19,15 @@ pipeline {
                     docker run -d --name test-nginx -p 8088:80 nginx:latest
                     sleep 5
 
-                    # Test if Nginx is running properly
+                    # Test if Nginx is working
                     if curl -s http://localhost:8088 | grep -q "Welcome to nginx"; then
                         echo "Nginx is working properly."
                     else
-                        echo "Error: Nginx is not running!" >&2
+                        echo "Error: Nginx is not working!" >&2
                         exit 1
                     fi
 
-                    # Cleanup: remove container after test
+                    # Stop and remove the container
                     docker stop test-nginx
                     docker rm test-nginx
                     '''
