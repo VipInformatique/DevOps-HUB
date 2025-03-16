@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jenkins Pipeline Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jenkins Pipeline Example</h1>
+    <p>Below is the content of <code>nginx-pipeline.groovy</code>:</p>
+    <pre id="code">Loading...</pre>
+
+    <script>
+        // Ścieżka do pliku (dostępnego publicznie)
+        const fileUrl = 'https://vipinformatique.github.io/DevOps-HUB/automation/jenkins/nginx-pipeline.groovy';
+
+        // Pobieranie zawartości pliku i wstawianie do HTML
+        fetch(fileUrl)
+            .then(response => {
+                if (!response.ok) throw new Error('File not found');
+                return response.text();
+            })
+            .then(text => {
+                document.getElementById('code').textContent = text;
+            })
+            .catch(error => {
+                document.getElementById('code').textContent = 'Error loading file: ' + error;
+            });
+    </script>
+</body>
+</html>
