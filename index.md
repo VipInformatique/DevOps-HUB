@@ -8,7 +8,7 @@ Here you will find **tools, notes, and useful information** I use in my daily wo
 
 ## 📚 Posts and Resources
 
-### 🛠 Kali Linux Tools
+### 🛠 [Kali Linux Tools](./kali-tools.md)
 A list of essential Kali Linux tools for penetration testing and security assessments.
 
 ### 🔄 CI/CD Notes (coming soon)
