@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jenkins Pipeline for Nginx</title>
+    <title>Jenkins Pipeline: Nginx Deployment in Docker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
         }
-        h1 {
+        h1, h2 {
             color: #333;
+        }
+        ul {
+            margin-bottom: 20px;
         }
         pre {
             background-color: #f4f4f4;
@@ -24,42 +27,39 @@
     </style>
 </head>
 <body>
-    <h1>Jenkins Pipeline: Automatic Nginx Deployment and Testing</h1>
+    <h1>Jenkins Pipeline: Automatic Nginx Deployment in Docker</h1>
 
     <p>
-        This Jenkins pipeline performs an automated deployment and test of an Nginx container on a RHEL system.
-        The pipeline has the following steps:
+        This Jenkins pipeline automates the process of deploying an Nginx container on a remote RHEL server using Docker. It also configures the firewall and performs an automated test to verify if Nginx is running properly.
     </p>
+
+    <h2>🔶 Pipeline Steps:</h2>
     <ul>
-        <li>⚙️ <strong>System Update</strong>: Update the system using <code>dnf update -y</code>.</li>
-        <li>📥 <strong>Pull Nginx Image</strong>: Download the latest Nginx image from Docker Hub.</li>
-        <li>🚀 <strong>Run and Test Nginx</strong>:
-            <ul>
-                <li>Start Nginx container mapped to port 8088.</li>
-                <li>Check if Nginx responds with the welcome page.</li>
-                <li>Clean up: Stop and remove the container.</li>
-            </ul>
-        </li>
+        <li>✅ <strong>Install Docker</strong>: Ensures Docker is installed and running on the remote RHEL server.</li>
+        <li>✅ <strong>Pull Nginx Image</strong>: Downloads the latest official Nginx Docker image from Docker Hub.</li>
+        <li>✅ <strong>Run Nginx Container</strong>: Starts the Nginx container and exposes it on port 80.</li>
+        <li>✅ <strong>Configure Firewall</strong>: Opens port 80 to allow HTTP traffic.</li>
+        <li>✅ <strong>Test Nginx</strong>: Verifies that Nginx is running and responding using a curl command.</li>
     </ul>
 
-    <h2>📜 Pipeline Code</h2>
-    <pre id="code">Loading pipeline...</pre>
+    <h2>📜 Pipeline Code:</h2>
+    <pre id="code">Loading pipeline code...</pre>
 
     <script>
-        // URL do pliku groovy
+        // URL to the raw Jenkins pipeline file
         const fileUrl = 'https://vipinformatique.github.io/DevOps-HUB/automation/jenkins/nginx-pipeline.groovy';
 
-        // Pobierz zawartość pliku i wyświetl
+        // Fetch and display the file content
         fetch(fileUrl)
             .then(response => {
-                if (!response.ok) throw new Error('File not found');
+                if (!response.ok) throw new Error('Pipeline file not found!');
                 return response.text();
             })
             .then(text => {
                 document.getElementById('code').textContent = text;
             })
             .catch(error => {
-                document.getElementById('code').textContent = 'Error loading file: ' + error;
+                document.getElementById('code').textContent = 'Error loading pipeline: ' + error;
             });
     </script>
 </body>
